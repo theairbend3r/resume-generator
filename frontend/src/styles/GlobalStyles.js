@@ -7,6 +7,14 @@ const CustomStyles = createGlobalStyle`
     -webkit-tap-highlight-color: ${theme`colors.purple.500`};
     ${tw`antialiased`}
   }
+  .w-600 {
+    max-width: 600px;
+    width: 600px;
+  }
+  label {
+    font-weight: 500;
+    color: #374151;
+  }
 `
 
 const GlobalStyles = () => (
