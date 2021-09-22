@@ -6,23 +6,23 @@ const App = () => {
       <h1 tw="text-xl md:text-2xl xl:text-3xl">resume generator</h1>
       <form tw="flex flex-col">
         <div tw="flex flex-col items-center mb-2">
-          <label tw="flex flex-row my-2 ">
+          <label tw="flex flex-col my-2 ">
             Name
-            <input tw="border mx-2" type="text" />
+            <input tw="border" type="text" />
           </label>
-          <label tw="flex flex-row my-2">
+          <label tw="flex flex-col my-2">
             Email
-            <input tw="border mx-2" type="text" />
+            <input tw="border" type="text" />
           </label>
-          <label tw="flex flex-row my-2">
+          <label tw="flex flex-col my-2">
             Work Experience
-            <input tw="border mx-2" type="text" />
+            <input tw="border" type="text" />
           </label>
-          <label tw="flex flex-row my-2">
+          <label tw="flex flex-col my-2">
             Projects
-            <input tw="border mx-2" type="text" />
+            <input tw="border" type="text" />
           </label>
-          <button tw="border rounded p-2" type="submit">
+          <button tw="border rounded p-2 my-4" type="submit">
             generate resume
           </button>
         </div>
