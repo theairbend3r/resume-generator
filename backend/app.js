@@ -7,6 +7,10 @@ app.get("/check", (req, res) => {
   });
 });
 
+app.post("/create-resume", (req, res) => {
+  console.log(req.body);
+});
+
 app.listen(process.env.PORT || 3000, () => {
   console.log(
     `Server running on https://localhost:${process.env.PORT || 3000}`
