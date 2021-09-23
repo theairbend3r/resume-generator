@@ -1,4 +1,4 @@
-const { getFormattedDate } = require("../utilities/utils");
+const { getFormattedDate } = require("../utilites/utils");
 
 module.exports = ({
   name,
@@ -18,7 +18,6 @@ module.exports = ({
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -69,15 +68,14 @@ module.exports = ({
                 <h2 class="section-name"><b>Technical Skills</b></h2>
                 <hr/>
                 <p> 
-                    ${skills.map((skill) => `${skill}`).join(", ")}
+                    ${skills?.map((skill) => `${skill}`).join(", ")}
                 </p>
                 
                 <h3 class="section-name"><strong>Education</strong></h3>
                 <hr/>
                 <p> 
                     <ul class="edu-section">
-                        ${education
-                          .map(
+                        ${education?.map(
                             (edu) =>
                               `<li><strong>${edu.degree}</strong> in <strong>${
                                 edu.discipline
@@ -97,8 +95,7 @@ module.exports = ({
                 <hr/>
                 <p class="project-section"> 
                     <ul>
-                        ${projects
-                          .map(
+                        ${projects?.map(
                             (prj) =>
                               `<li><strong>${prj.title}</strong>: ${
                                 prj.description
@@ -116,8 +113,7 @@ module.exports = ({
                 <hr/>
                 <p class="exp-section"> 
                     <ul>
-                        ${experience
-                          .map(
+                        ${experience?.map(
                             (ex) =>
                               `<li><strong>${ex.organization}</strong> (${
                                 ex.position
@@ -135,8 +131,7 @@ module.exports = ({
                 <hr/>
                 <p class=".extra-section"> 
                     <ul>
-                        ${achievement
-                          .map((ac) => `<li>${ac.description}</li>`)
+                        ${achievement?.map((ac) => `<li>${ac.description}</li>`)
                           .join("")}
                     </ul>
                 </p>

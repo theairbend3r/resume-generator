@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-app.use(cors());
+var corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200 
+}
 app.use(express.json());
 const pdf = require("html-pdf");
 const pdfTemplate = require("./templates");
@@ -13,7 +16,14 @@ app.get("/check", (req, res) => {
   });
 });
 
-app.post("/create-resume", (req, res) => {
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.header("Access-Control-Allow-Headers", "x-access-token, Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.post("/create-resume",cors(corsOptions), (req, res) => {
   console.log(req.body);
   pdf.create(pdfTemplate(req.body), {}).toStream((err, stream) => {
     if (err)
@@ -28,8 +38,8 @@ app.post("/create-resume", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(
-    `Server running on https://localhost:${process.env.PORT || 3000}`
+    `Server running on https://localhost:${process.env.PORT || 5000}`
   );
 });
