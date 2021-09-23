@@ -1,14 +1,14 @@
-import React from "react";
-import { WithWizard } from "react-albus";
-import "twin.macro";
+import React from "react"
+import { WithWizard } from "react-albus"
+import "twin.macro"
 
 const Navigation = () => (
   <WithWizard
     render={({ next, previous, step, steps }) => (
-      <div tw="w-full flex items-center my-5 justify-center">
+      <div tw="flex flex-row w-full items-center justify-around my-6 md:my-8 xl:my-10">
         {steps.indexOf(step) > 0 && (
           <button
-            tw="bg-gray-400 mx-5 w-full rounded-sm px-5 py-3"
+            tw="bg-white border w-full border-blue-900 text-blue-900 rounded px-2 py-3 mr-2 md:mr-4 xl:mr-6"
             onClick={previous}
           >
             Back
@@ -16,7 +16,7 @@ const Navigation = () => (
         )}
         {steps.indexOf(step) < steps.length - 1 && (
           <button
-            tw="bg-gray-900 text-white mx-5 w-full rounded-sm px-5 py-3"
+            tw="bg-blue-900 w-full text-white rounded px-2 py-3"
             onClick={next}
           >
             Next
@@ -25,6 +25,6 @@ const Navigation = () => (
       </div>
     )}
   />
-);
+)
 
-export default Navigation;
+export default Navigation

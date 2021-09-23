@@ -1,54 +1,24 @@
-import React from "react";
-import "twin.macro";
-import { AiOutlineForm } from "react-icons/ai";
+import tw from "twin.macro"
+import React from "react"
+import { AiOutlineForm } from "react-icons/ai"
+import FormTitle from "./general/FormTitle"
+import FormField from "./general/FormField"
+import FormContainer from "./general/FormContainer"
 
-function BasicDetails() {
+const BasicDetails = () => {
   return (
-    <div tw="px-5 w-full flex flex-col items-center justify-center">
-      <h1 tw="text-3xl mx-4 font-bold flex items-center">
+    <FormContainer>
+      <FormTitle>
         <span tw="mr-4">
-          <AiOutlineForm value={{ className: 'inline-block' }} />
+          <AiOutlineForm value={{ className: "inline-block" }} />
         </span>
-        <span>Basic Details</span>
-      </h1>
-      <hr tw="my-3" />
-      <div tw="w-full flex flex-col my-2">
-        <label tw="text-sm" for="name">
-          Name
-        </label>
-        <input
-          type="text"
-          tw="p-2 rounded-md w-full border-2"
-          id="name"
-          name="name"
-        />
-      </div>
-      <div tw="w-full flex flex-col my-2">
-        <label tw="text-sm" for="email">
-          Email
-        </label>
-        <input
-          type="email"
-          tw="p-2 rounded-md w-full border-2"
-          id="email"
-          name="email"
-        />
-      </div>
-      <div tw="w-full flex flex-col my-2">
-        <label tw="text-sm" for="phone">
-          Phone no.
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          tw="p-2 rounded-md w-full border-2"
-          name="phone"
-          placeholder="123-456-789"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-        />
-      </div>
-    </div>
-  );
+        <h1>Basic Details</h1>
+      </FormTitle>
+      <FormField field="Name" />
+      <FormField field="Email" />
+      <FormField field="Phone" />
+    </FormContainer>
+  )
 }
 
-export default BasicDetails;
+export default BasicDetails
