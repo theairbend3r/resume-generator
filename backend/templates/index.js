@@ -1,4 +1,4 @@
-const { getFormattedDate } = require("../utilities/utility");
+const { getFormattedDate } = require("../utilities/utils");
 
 module.exports = ({
   name,
