@@ -1,12 +1,17 @@
 import React from "react";
 import "twin.macro";
-import axios from axios;
+import axios from "axios";
 
 function Submit({ state, setState }) {
 
-  const submitHandler = () => {
+  const submitHandler = async () => {
     const data = state;
-    axios.post('localhost:5000/')
+    try {
+      const response = await axios.post('http://localhost:5000/create-resume', data);
+      console.log(response);
+    } catch(err) {
+      console.log({err});
+    }
   }
 
   return (
