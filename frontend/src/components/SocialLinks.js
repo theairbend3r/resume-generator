@@ -2,7 +2,7 @@ import React from "react"
 import "twin.macro"
 import { AiOutlineLink } from "react-icons/ai"
 import FormTitle from "./general/FormTitle"
-import FormField from "./general/FormField"
+import { TextField } from "./general/FormFields"
 import FormContainer from "./general/FormContainer"
 
 function SocialLinks() {
@@ -14,8 +14,8 @@ function SocialLinks() {
         </span>
         <span>Links</span>
       </FormTitle>
-      <FormField field="Github" />
-      <FormField field="LinkedIn" />
+      <TextField field="Github" />
+      <TextField field="LinkedIn" />
     </FormContainer>
   )
 }

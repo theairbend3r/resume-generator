@@ -13,7 +13,7 @@ import Navigation from "./Navigation"
 const Form = () => {
   return (
     <BrowserRouter>
-      <div tw="flex flex-col items-center justify-center bg-white rounded w-5/6 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 p-2 md:p-4 xl:p-6">
+      <div tw="flex flex-col items-center justify-center bg-white rounded w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 p-2 md:p-4 xl:p-6">
         <Route
           render={({ history }) => (
             <Wizard history={history}>
