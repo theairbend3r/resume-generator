@@ -17,8 +17,8 @@ function Education() {
       <TextField field="University" />
       <TextField field="Degree" />
       <TextField field="Discipline" />
-      <DateField field="StartYear" />
-      <DateField field="EndYear" />
+      <DateField field="Start Year" />
+      <DateField field="End Year" />
       <TextField field="Marks" />
     </FormContainer>
   )

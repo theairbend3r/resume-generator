@@ -22,6 +22,14 @@ const Navigation = () => (
             Next
           </button>
         )}
+        {/* ADD A SUBMIT BUTTON */}
+        {/* The following does not seem to work */}
+
+        {/* {steps.indexOf(step) === steps.length && (
+          <button tw="bg-blue-900 w-full text-white rounded px-2 py-3">
+            Submit
+          </button>
+        )} */}
       </div>
     )}
   />
