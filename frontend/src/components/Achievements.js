@@ -1,23 +1,28 @@
-import React from "react"
-import "twin.macro"
-import { AiFillTrophy } from "react-icons/ai"
-import FormTitle from "./general/FormTitle"
-import FormContainer from "./general/FormContainer"
-import { TextField } from "./general/FormFields"
+import React from "react";
+import "twin.macro";
+import { AiFillTrophy } from "react-icons/ai";
 
 function Achievements() {
   return (
-    <FormContainer>
-      <FormTitle>
+    <div tw="px-5 w-full flex flex-col items-center justify-center">
+      <h1 tw="text-3xl mx-4 font-bold flex items-center">
         <span tw="mr-4">
-          <AiFillTrophy value={{ className: "inline-block" }} />
+          <AiFillTrophy value={{ className: 'inline-block' }} />
         </span>
         <span>Achievements</span>
-      </FormTitle>
+      </h1>
       <hr tw="my-3" />
-      <TextField field="Description" />
-    </FormContainer>
-  )
+      <div tw="w-full flex flex-col my-2">
+        <label tw="text-sm" for="achievementDesc">Description</label>
+        <input
+          type="text"
+          tw="p-2 rounded-md w-full border-2"
+          id="achievementDesc"
+          name="achievementDesc"
+        />
+      </div>
+    </div>
+  );
 }
 
-export default Achievements
+export default Achievements;
