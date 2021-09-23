@@ -3,10 +3,8 @@ import Form from "./components/Form"
 
 const App = () => {
   return (
-    <div tw="flex flex-col items-center justify-start w-full min-h-screen bg-gradient-to-b from-green-400 to-blue-500 p-2 md:p-6 xl:p-8">
-      <h1 tw=" text-gray-100 font-bold text-2xl md:text-5xl xl:text-6xl mb-12 md:mb-20 xl:mb-28">
-        Resume Generator
-      </h1>
+    <div tw="py-5 flex flex-col items-center justify-start w-full min-h-screen">
+      <h1 tw="text-3xl mb-10 font-bold"> Resume Generator </h1>
       <Form />
     </div>
   )
