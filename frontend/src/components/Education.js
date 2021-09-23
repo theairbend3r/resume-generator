@@ -2,8 +2,8 @@ import React from "react"
 import "twin.macro"
 import { MdSchool } from "react-icons/md"
 import FormTitle from "./general/FormTitle"
-import { TextField, DateField } from "./general/FormFields"
 import FormContainer from "./general/FormContainer"
+import { TextField, DateField } from "./general/FormFields"
 
 function Education() {
   return (
