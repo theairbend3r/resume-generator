@@ -5,7 +5,7 @@ import FormTitle from "./general/FormTitle"
 import FormContainer from "./general/FormContainer"
 import { TextField, DateField } from "./general/FormFields"
 
-function Experience() {
+const Experience = () => {
   return (
     <FormContainer>
       <FormTitle>
