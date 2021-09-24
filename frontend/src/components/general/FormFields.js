@@ -25,7 +25,7 @@ export const TextField = ({ section, field }) => {
       </label>
       <input
         type="text"
-        tw="bg-gray-900 w-full rounded-lg p-2"
+        tw="bg-gray-900 w-full rounded-lg p-2 focus:ring-2 focus:ring-gray-700"
         value={formData[section][_field]}
         onChange={handleInputChange}
         id={`${section}_${_field}`}
