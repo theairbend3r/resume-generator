@@ -3,30 +3,38 @@ import { WithWizard } from "react-albus";
 import "twin.macro";
 import { FormContext } from "../FormContext";
 import axios from "axios";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { saveAs } from "file-saver";
 
 const Navigation = () => {
-  const [formData] = useContext(FormContext)
+  const [formData] = useContext(FormContext);
 
   const submit = () => {
     axios
-      .post("http://localhost:5000/create-resume", formData)
+      .post("http://localhost:5000/create-resume", formData, {
+        responseType: "blob",
+      })
       .then(function (response) {
         console.log(response);
-        toast.success('Data saved successfully. Your resume would be downloaded shortly!', {
-          position: "top-right",
-          autoClose: 3000
-          });
+        toast.success(
+          "Data saved successfully. Your resume would be downloaded shortly!",
+          {
+            position: "top-right",
+            autoClose: 3000,
+          }
+        );
+        const pdf = new Blob([response.data], { type: "application/pdf" });
+        saveAs(pdf, "Resume.pdf");
       })
       .catch(function (error) {
         console.log(error);
-        toast.error('Oops! Something went wrong.', {
+        toast.error("Oops! Something went wrong.", {
           position: "top-right",
-          autoClose: 3000
-          });
+          autoClose: 3000,
+        });
       });
-  }
+  };
 
   return (
     <WithWizard
@@ -52,7 +60,10 @@ const Navigation = () => {
           )}
 
           {steps.indexOf(step) === steps.length - 1 && (
-            <button tw="bg-gradient-to-r from-pink-800 to-purple-800 hover:from-pink-700 hover:to-purple-700 w-full text-white rounded-lg px-2 py-3 md:px-4 md:py-5 text-sm md:text-base xl:text-lg" onClick={submit}>
+            <button
+              tw="bg-gradient-to-r from-pink-800 to-purple-800 hover:from-pink-700 hover:to-purple-700 w-full text-white rounded-lg px-2 py-3 md:px-4 md:py-5 text-sm md:text-base xl:text-lg"
+              onClick={submit}
+            >
               Submit
             </button>
           )}
