@@ -16,10 +16,13 @@ app.get("/check", (req, res) => {
 app.post("/create-resume", (req, res) => {
   console.log(req.body);
   pdf.create(pdfTemplate(req.body), {}).toStream((err, stream) => {
-    if (err)
+    if (err) {
+      console.log(pdfTemplate(req.body));
+      console.log(err);
       return res
         .status(500)
         .send({ errorMessage: "an error occurred while creating the resume!" });
+    }
     res.writeHead(200, {
       "Content-Type": "application/force-download",
       "Content-disposition": "attachment; filename=Resume.pdf",
