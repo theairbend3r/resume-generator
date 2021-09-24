@@ -9,7 +9,7 @@ function Skills() {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <FaBookOpen value={{ className: "inline-block" }} />
         </span>
         <span>Skills</span>

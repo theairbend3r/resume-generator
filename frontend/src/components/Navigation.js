@@ -8,7 +8,7 @@ const Navigation = () => (
       <div tw="flex flex-row w-full items-center justify-around my-6 md:my-8 xl:my-10">
         {steps.indexOf(step) > 0 && (
           <button
-            tw="bg-white border w-full border-blue-900 text-blue-900 rounded px-2 py-3 mr-2 md:mr-4 xl:mr-6"
+            tw="w-full border border-purple-700 bg-gray-900 text-gray-100 rounded-lg px-2 py-3 md:px-4 md:py-5 mr-10 md:mr-16 xl:mr-20 text-sm md:text-base xl:text-lg"
             onClick={previous}
           >
             Back
@@ -16,7 +16,7 @@ const Navigation = () => (
         )}
         {steps.indexOf(step) < steps.length - 1 && (
           <button
-            tw="bg-blue-900 w-full text-white rounded px-2 py-3"
+            tw="bg-purple-800 w-full text-white rounded-lg px-2 py-3 md:px-4 md:py-5 text-sm md:text-base xl:text-lg"
             onClick={next}
           >
             Next
@@ -25,11 +25,11 @@ const Navigation = () => (
         {/* ADD A SUBMIT BUTTON */}
         {/* The following does not seem to work */}
 
-        {/* {steps.indexOf(step) === steps.length && (
+        {steps.indexOf(step) === steps.length && (
           <button tw="bg-blue-900 w-full text-white rounded px-2 py-3">
             Submit
           </button>
-        )} */}
+        )}
       </div>
     )}
   />

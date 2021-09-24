@@ -9,7 +9,7 @@ function Education() {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <MdSchool value={{ className: "inline-block" }} />
         </span>
         <span>Education</span>

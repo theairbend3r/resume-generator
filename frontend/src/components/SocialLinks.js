@@ -9,7 +9,7 @@ function SocialLinks() {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <AiOutlineLink value={{ className: "inline-block" }} />
         </span>
         <span>Links</span>

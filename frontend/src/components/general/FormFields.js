@@ -16,13 +16,16 @@ export const TextField = ({ section, field }) => {
   console.log(formData)
 
   return (
-    <div tw="flex flex-col w-full  my-2">
-      <label tw="text-sm md:text-base xl:text-lg" for={`${section}_${_field}`}>
+    <div tw="flex flex-col w-full my-2">
+      <label
+        tw="text-gray-100 text-sm md:text-base xl:text-lg my-2 md:my-4"
+        for={`${section}_${_field}`}
+      >
         {field}
       </label>
       <input
         type="text"
-        tw="p-2 rounded-md w-full border-2"
+        tw="bg-gray-900 w-full rounded-lg p-2"
         value={formData[section][_field]}
         onChange={handleInputChange}
         id={`${section}_${_field}`}
@@ -45,13 +48,16 @@ export const DateField = ({ section, field }) => {
 
   console.log(formData)
   return (
-    <div tw="w-full flex my-2 flex-col">
-      <label tw="text-sm md:text-base xl:text-lg" for={`${section}_${_field}`}>
+    <div tw="flex flex-col w-full my-2">
+      <label
+        tw="text-gray-100 text-sm md:text-base xl:text-lg my-2 md:my-4"
+        for={`${section}_${_field}`}
+      >
         {field}
       </label>
       <input
         type="date"
-        tw="p-2 rounded-md w-full border-2"
+        tw="bg-gray-900 w-full rounded-lg p-2"
         value={formData[section][_field]}
         onChange={handleInputChange}
         id={`${section}_${_field}`}

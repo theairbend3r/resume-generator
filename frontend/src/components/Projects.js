@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <BsHammer value={{ className: "inline-block" }} />
         </span>
         <span>Projects</span>

@@ -9,7 +9,7 @@ const BasicDetails = () => {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <AiOutlineForm value={{ className: "inline-block" }} />
         </span>
         <h1>Basic Details</h1>

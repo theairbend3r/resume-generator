@@ -9,12 +9,11 @@ function Achievements() {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <AiFillTrophy value={{ className: "inline-block" }} />
         </span>
         <span>Achievements</span>
       </FormTitle>
-      <hr tw="my-3" />
       <TextField section="achievements" field="Description" />
     </FormContainer>
   )
