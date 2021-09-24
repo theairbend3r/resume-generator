@@ -14,9 +14,9 @@ const Projects = () => {
         </span>
         <span>Projects</span>
       </FormTitle>
-      <TextField field="Title" />
-      <TextField field="Description" />
-      <TextField field="Link" />
+      <TextField section="projects" field="Title" />
+      <TextField section="projects" field="Description" />
+      <TextField section="projects" field="Link" />
     </FormContainer>
   )
 }

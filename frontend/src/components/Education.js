@@ -14,12 +14,12 @@ function Education() {
         </span>
         <span>Education</span>
       </FormTitle>
-      <TextField field="University" />
-      <TextField field="Degree" />
-      <TextField field="Discipline" />
-      <DateField field="Start Year" />
-      <DateField field="End Year" />
-      <TextField field="Marks" />
+      <TextField section="education" field="University" />
+      <TextField section="education" field="Degree" />
+      <TextField section="education" field="Discipline" />
+      <DateField section="education" field="Start Year" />
+      <DateField section="education" field="End Year" />
+      <TextField section="education" field="Marks" />
     </FormContainer>
   )
 }

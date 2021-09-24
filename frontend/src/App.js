@@ -1,5 +1,6 @@
 import "twin.macro"
 import Form from "./components/Form"
+import { FormProvider } from "./FormContext"
 
 const App = () => {
   return (
@@ -7,7 +8,9 @@ const App = () => {
       <h1 tw=" text-gray-100 font-bold text-2xl md:text-5xl xl:text-6xl mb-12 md:mb-20 xl:mb-28">
         Resume Generator
       </h1>
-      <Form />
+      <FormProvider>
+        <Form />
+      </FormProvider>
     </div>
   )
 }

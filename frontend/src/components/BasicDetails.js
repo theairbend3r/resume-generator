@@ -1,4 +1,4 @@
-import tw from "twin.macro"
+import "twin.macro"
 import React from "react"
 import { AiOutlineForm } from "react-icons/ai"
 import FormTitle from "./general/FormTitle"
@@ -14,9 +14,9 @@ const BasicDetails = () => {
         </span>
         <h1>Basic Details</h1>
       </FormTitle>
-      <TextField field="Name" />
-      <TextField field="Email" />
-      <TextField field="Phone" />
+      <TextField section="basic" field="Name" />
+      <TextField section="basic" field="Email" />
+      <TextField section="basic" field="Phone" />
     </FormContainer>
   )
 }

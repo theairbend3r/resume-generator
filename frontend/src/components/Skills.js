@@ -14,7 +14,7 @@ function Skills() {
         </span>
         <span>Skills</span>
       </FormTitle>
-      <TextField field="Skills" />
+      <TextField section="skills" field="Skills" />
     </FormContainer>
   )
 }

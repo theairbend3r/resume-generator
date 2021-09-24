@@ -14,8 +14,8 @@ function SocialLinks() {
         </span>
         <span>Links</span>
       </FormTitle>
-      <TextField field="Github" />
-      <TextField field="LinkedIn" />
+      <TextField section="social" field="Github" />
+      <TextField section="social" field="LinkedIn" />
     </FormContainer>
   )
 }

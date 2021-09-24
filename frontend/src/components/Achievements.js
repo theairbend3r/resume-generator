@@ -15,7 +15,7 @@ function Achievements() {
         <span>Achievements</span>
       </FormTitle>
       <hr tw="my-3" />
-      <TextField field="Description" />
+      <TextField section="achievements" field="Description" />
     </FormContainer>
   )
 }
