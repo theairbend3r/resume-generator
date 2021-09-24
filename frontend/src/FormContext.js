@@ -40,7 +40,11 @@ export const FormProvider = props => {
         link: "",
       },
     ],
-    achievements: [],
+    achievements: [
+      {
+        description: ""
+      }
+    ],
   })
 
   return (

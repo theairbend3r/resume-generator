@@ -28,8 +28,8 @@ app.post("/create-resume", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(
-    `Server running on https://localhost:${process.env.PORT || 3000}`
+    `Server running on https://localhost:${process.env.PORT || 5000}`
   );
 });

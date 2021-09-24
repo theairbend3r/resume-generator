@@ -1,6 +1,8 @@
 import "twin.macro"
 import Form from "./components/Form"
 import { FormProvider } from "./FormContext"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
       <FormProvider>
         <Form />
       </FormProvider>
+      <ToastContainer />
     </div>
   )
 }
