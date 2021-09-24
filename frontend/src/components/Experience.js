@@ -19,7 +19,7 @@ const Experience = () => {
 
       <TextField section="experience" field="Company" />
       <TextField section="experience" field="Position" />
-      <DateField section="experience" field="Start Year" />
+      <DateField section="experience" field="Start Date" />
       <div tw="flex flex-row w-full items-center justify-center my-4">
         <input
           type="checkbox"
@@ -36,7 +36,7 @@ const Experience = () => {
           Are you currently working here?
         </label>
       </div>
-      {!isCurrentJob && <DateField section="experience" field="End Year" />}
+      {!isCurrentJob && <DateField section="experience" field="End Date" />}
 
       <TextField section="experience" field="Description" />
     </FormContainer>

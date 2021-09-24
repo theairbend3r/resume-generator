@@ -1,18 +1,18 @@
-import "twin.macro";
-import React, { useContext } from "react";
-import { FormContext } from "../../FormContext";
+import "twin.macro"
+import React, { useContext } from "react"
+import { FormContext } from "../../FormContext"
 
 export const TextField = ({ section, field }) => {
-  const [formData, setFormData] = useContext(FormContext);
-  const _field = field.replace(/\s+/g, "").toLowerCase(); // Remove space and convert to lowercase
+  const [formData, setFormData] = useContext(FormContext)
+  const _field = field.replace(/\s+/g, "").toLowerCase() // Remove space and convert to lowercase
 
-  const handleInputChange = (event) => {
-    const formDataUpdated = { ...formData };
-    formDataUpdated[section][_field] = event.target.value;
-    setFormData(formDataUpdated);
-  };
+  const handleInputChange = event => {
+    const formDataUpdated = { ...formData }
+    formDataUpdated[section][0][_field] = event.target.value
+    setFormData(formDataUpdated)
+  }
 
-  console.log(formData);
+  console.log(formData)
 
   return (
     <div tw="flex flex-col w-full my-2">
@@ -25,27 +25,27 @@ export const TextField = ({ section, field }) => {
       <input
         type="text"
         tw="bg-gray-900 w-full rounded-lg p-2 focus:ring-2 focus:ring-gray-700"
-        value={formData[section][_field]}
+        value={formData[section][0][_field]}
         onChange={handleInputChange}
         id={`${section}_${_field}`}
         name={`${section}_${_field}`}
       />
     </div>
-  );
-};
+  )
+}
 
 export const DateField = ({ section, field }) => {
-  const [formData, setFormData] = useContext(FormContext);
+  const [formData, setFormData] = useContext(FormContext)
 
-  const _field = field.replace(/\s+/g, "").toLowerCase(); // Remove space and convert to lowercase
+  const _field = field.replace(/\s+/g, "").toLowerCase() // Remove space and convert to lowercase
 
-  const handleInputChange = (event) => {
-    const formDataUpdated = { ...formData };
-    formDataUpdated[section][_field] = event.target.value;
-    setFormData(formDataUpdated);
-  };
+  const handleInputChange = event => {
+    const formDataUpdated = { ...formData }
+    formDataUpdated[section][0][_field] = event.target.value
+    setFormData(formDataUpdated)
+  }
 
-  console.log(formData);
+  console.log(formData)
   return (
     <div tw="flex flex-col w-full my-2">
       <label
@@ -57,11 +57,11 @@ export const DateField = ({ section, field }) => {
       <input
         type="date"
         tw="bg-gray-900 w-full rounded-lg p-2"
-        value={formData[section][_field]}
+        value={formData[section][0][_field]}
         onChange={handleInputChange}
         id={`${section}_${_field}`}
         name={`${section}_${_field}`}
       />
     </div>
-  );
-};
+  )
+}

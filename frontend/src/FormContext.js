@@ -22,18 +22,22 @@ export const FormProvider = props => {
         university: "",
         degree: "",
         major: "",
-        startDate: "",
-        endDate: "Present",
+        startdate: "",
+        enddate: "",
         gpa: "",
       },
     ],
-    skills: [],
+    skills: [
+      {
+        skills: "",
+      },
+    ],
     experience: [
       {
         company: "",
         position: "",
-        startDate: "",
-        endDate: "Present",
+        startdate: "",
+        enddate: "",
         description: "",
       },
     ],
@@ -44,7 +48,11 @@ export const FormProvider = props => {
         link: "",
       },
     ],
-    achievements: [],
+    achievements: [
+      {
+        achievements: "",
+      },
+    ],
   })
 
   return (

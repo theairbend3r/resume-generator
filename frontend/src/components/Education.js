@@ -19,7 +19,7 @@ function Education() {
       <TextField section="education" field="University" />
       <TextField section="education" field="Degree" />
       <TextField section="education" field="Major" />
-      <DateField section="education" field="Start Year" />
+      <DateField section="education" field="Start Date" />
       <TextField section="education" field="GPA" />
       <div tw="flex flex-row w-full items-center justify-center my-4">
         <input
@@ -37,7 +37,7 @@ function Education() {
           Are you currently studying?
         </label>
       </div>
-      {!isCurrentEdu && <DateField section="education" field="End Year" />}
+      {!isCurrentEdu && <DateField section="education" field="End Date" />}
     </FormContainer>
   )
 }
