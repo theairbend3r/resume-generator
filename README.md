@@ -2,7 +2,9 @@
 
 A full-stack web application to create resumes.
 
-![app-screenshot](./assets/app-screenshot.png)
+<p align="center">
+  <img src="./assets/app-screenshot.png">
+</p>
 
 ## Problem Overview
 
