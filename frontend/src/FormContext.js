@@ -4,19 +4,15 @@ export const FormContext = createContext()
 
 export const FormProvider = props => {
   const [formData, setFormData] = useState({
-    basic: [
-      {
-        name: "",
-        email: "",
-        phone: "",
-      },
-    ],
-    social: [
-      {
-        github: "",
-        linkedin: "",
-      },
-    ],
+    basic: {
+      name: "",
+      email: "",
+      phone: "",
+    },
+    social: {
+      github: "",
+      linkedin: "",
+    },
     education: [
       {
         university: "",
@@ -44,11 +40,7 @@ export const FormProvider = props => {
         link: "",
       },
     ],
-    achievements: [
-      {
-        description: ""
-      }
-    ],
+    achievements: [],
   })
 
   return (
