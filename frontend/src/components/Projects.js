@@ -9,14 +9,14 @@ const Projects = () => {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <BsHammer value={{ className: "inline-block" }} />
         </span>
         <span>Projects</span>
       </FormTitle>
-      <TextField field="Title" />
-      <TextField field="Description" />
-      <TextField field="Link" />
+      <TextField section="projects" field="Title" />
+      <TextField section="projects" field="Description" />
+      <TextField section="projects" field="Link" />
     </FormContainer>
   )
 }

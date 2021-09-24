@@ -11,16 +11,16 @@ const Experience = () => {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <MdWork value={{ className: "inline-block" }} />
         </span>
         <span>Experience</span>
       </FormTitle>
 
-      <TextField field="Company" />
-      <TextField field="Position" />
-      <DateField field="Start Year" />
-      <div tw="flex flex-row w-full items-start my-4">
+      <TextField section="experience" field="Company" />
+      <TextField section="experience" field="Position" />
+      <DateField section="experience" field="Start Year" />
+      <div tw="flex flex-row w-full items-center justify-center my-4">
         <input
           type="checkbox"
           id="isCurrentJob"
@@ -29,13 +29,16 @@ const Experience = () => {
           value="isCurrentJob"
           onClick={() => setIsCurrentJob(!isCurrentJob)}
         />
-        <label for="isCurrentJob" tw="text-sm">
+        <label
+          for="isCurrentJob"
+          tw="text-gray-400 text-sm md:text-base xl:text-lg"
+        >
           Are you currently working here?
         </label>
       </div>
-      {!isCurrentJob && <DateField field="End Year" />}
+      {!isCurrentJob && <DateField section="experience" field="End Year" />}
 
-      <TextField field="Description" />
+      <TextField section="experience" field="Description" />
     </FormContainer>
   )
 }

@@ -9,13 +9,13 @@ function SocialLinks() {
   return (
     <FormContainer>
       <FormTitle>
-        <span tw="mr-4">
+        <span tw="mr-2">
           <AiOutlineLink value={{ className: "inline-block" }} />
         </span>
         <span>Links</span>
       </FormTitle>
-      <TextField field="Github" />
-      <TextField field="LinkedIn" />
+      <TextField section="social" field="Github" />
+      <TextField section="social" field="LinkedIn" />
     </FormContainer>
   )
 }
