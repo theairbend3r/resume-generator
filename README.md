@@ -34,6 +34,42 @@ Finally, to create the multi-step form, we used `react-albus` developed by Amex.
 
 The backend is built using NodeJS and ExpressJS.
 
+### Install
+
+Clone the repo.
+
+```
+git clone https://github.com/theairbend3r/resume-generator.git
+```
+
+Install frontend dependencies.
+
+```
+cd frontend/
+npm install
+```
+
+Install backend dependencies.
+
+```
+cd backend/
+npm install
+```
+
+Start the frontend server.
+
+```
+npm start
+```
+
+Start the backend server.
+
+```
+npm start
+```
+
+The frontend lives at `http://localhost:3000` and the backend lives at `http://localhost:5000`.
+
 ### What’s next ?
 
 - Allow users to save the information and edit the resume later.
