@@ -16,7 +16,7 @@ const Navigation = () => (
         )}
         {steps.indexOf(step) < steps.length - 1 && (
           <button
-            tw="bg-purple-800 w-full text-white rounded-lg px-2 py-3 md:px-4 md:py-5 text-sm md:text-base xl:text-lg"
+            tw="bg-gradient-to-r from-pink-800 to-purple-800 w-full text-white rounded-lg px-2 py-3 md:px-4 md:py-5 text-sm md:text-base xl:text-lg"
             onClick={next}
           >
             Next
@@ -25,8 +25,8 @@ const Navigation = () => (
         {/* ADD A SUBMIT BUTTON */}
         {/* The following does not seem to work */}
 
-        {steps.indexOf(step) === steps.length && (
-          <button tw="bg-blue-900 w-full text-white rounded px-2 py-3">
+        {steps.indexOf(step) === steps.length - 1 && (
+          <button tw="bg-gradient-to-r from-pink-800 to-purple-800 w-full text-white rounded-lg px-2 py-3 md:px-4 md:py-5 text-sm md:text-base xl:text-lg">
             Submit
           </button>
         )}
