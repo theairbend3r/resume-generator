@@ -23,7 +23,7 @@ export const FormProvider = props => {
         gpa: "",
       },
     ],
-    skills: "",
+    skills: [],
     experience: [
       {
         company: "",
@@ -40,7 +40,7 @@ export const FormProvider = props => {
         link: "",
       },
     ],
-    achievements: "",
+    achievements: [],
   })
 
   return (
